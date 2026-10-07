@@ -5,10 +5,10 @@ Nettoyage d'un extrait du dataset **StockX Data Contest 2019** (ventes de sneake
 ## Ce que fait le script
 - Lecture des 1000 premières lignes de `StockX-Data-Contest-2019-3.csv`
 - Conversion de `Order Date` et `Release Date` en dates
-- Nettoyage des prix (`Sale Price`, `Retail Price`) : suppression des symboles et virgules, passage en nombres
+- Nettoyage des prix (`Sale Price`, `Retail Price`) : `"$1,097"` devient `1097.0`
 - Typage numérique de `Shoe Size`
 - Normalisation du texte (minuscules, espaces) pour `Buyer Region`, `Brand`, `Sneaker Name`
-- Export du CSV nettoyé et affichage en tableau dans la console
+- Export dans `output/stockx_nettoye.csv` et affichage en tableau dans la console
 
 ## Lancer le projet
 ```bash
@@ -17,9 +17,10 @@ python -m venv .venv
 pip install -r requirements.txt
 python main.py
 ```
+Les fichiers nettoyés sont enregistrés dans le dossier `output/` (créé automatiquement).
 
 ## Stack
-Python, pandas, numpy, tabulate
+Python, pandas, tabulate
 
 ## Auteur
 Ange Fresnel Traoré - ESATIC, Abidjan
